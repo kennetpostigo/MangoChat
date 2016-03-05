@@ -5,7 +5,7 @@ var UserInput = React.createClass({
 	getInitialState: function () {
 		return {text: ''};
 	},
-
+	// callback to App component handleMessageSubmit
 	handleSubmit: function (e) {
 		e.preventDefault();
 		var message = {
@@ -15,7 +15,7 @@ var UserInput = React.createClass({
 		this.props.onMessageSubmit(message);
 		this.setState({ text: '' });
 	},
-
+	// updates the state in when the text in the input changes
 	changeHandler: function(e) {
 		this.setState({ text : e.target.value });
 	},

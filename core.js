@@ -1,6 +1,6 @@
-// Keep track of which names are used so that there are no duplicates
 export var core = (function () {
   var names = {};
+  // claim a name so that no one else can have the same one
   var claim = function (name) {
     if (!name || names[name]) {
       return false;
@@ -10,7 +10,7 @@ export var core = (function () {
     }
   };
 
-  // find the lowest unused "guest" name and claim it
+  // Generates a guest and increments the guestid
   var getGuestName = function () {
     var name,
       nextUserId = 1;
@@ -23,7 +23,7 @@ export var core = (function () {
     return name;
   };
 
-  // serialize claimed names as an array
+  // grab the names object and turn it into an array for client.
   var get = function () {
     var res = [];
     for (var user in names) {
@@ -32,7 +32,7 @@ export var core = (function () {
 
     return res;
   };
-
+  //free up a name when the guest disconnects.
   var free = function (name) {
     if (names[name]) {
       delete names[name];
