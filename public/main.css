@@ -1,0 +1,61 @@
+body{
+  background-color: #fff;
+}
+.online{
+  background-color: #4d394b;
+  height: 100vh;
+  color: #ab9ba9;
+}
+.messaging{
+  height: 100vh;
+  background-image: url('img/mango.png');
+  background-repeat: no-repeat;
+  background-position: center;
+}
+.messaging .UserInput{
+  position: fixed;
+  bottom: 0;
+  width: 72%;
+  height: 8vh;
+  border-radius:0;
+  resize: none;
+}
+.TABTN{
+  height:8vh;
+  padding:0;
+  width: 100%;
+  z-index: 500;
+}
+.MessageList{
+  width: 100%;
+  height: 92vh;
+  overflow: auto;
+}
+.UserMessage{
+  padding-left: 10px;
+}
+
+.noPadding{
+	padding-left:0;
+  padding-right:0;
+}
+.messageDate{
+  font-weight: normal;
+  font-size: 10px;
+  padding-left:10px;
+  color: #9e9ea6;
+}
+
+.messageAuthor{
+  font-weight: bolder;
+}
+
+.sentMessage{
+  padding-left: 20px;
+}
+.bot{
+  background-color: #4c9689 !important;
+  height: 100px;
+  width: 100%;
+  color: #fff;
+}
