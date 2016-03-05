@@ -1,0 +1,8 @@
+node_modules
+bower_components
+npm-debug.log
+.DS_Store
+__build__
+dist
+coverage
+prepos.cfg
